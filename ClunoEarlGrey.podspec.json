@@ -16,7 +16,7 @@
   },
   "requires_arc": true,
   "source": {
-    "http": "https://www.github.com/cluno-engineering/EarlGrey/releases/download/1.16.1/EarlGrey.zip"
+    "http": "https://www.github.com/cluno-engineering/EarlGrey/releases/download/1.16.1/ClunoEarlGrey.zip"
   },
   "frameworks": [
     "CoreData",
@@ -29,12 +29,12 @@
     "XCTest"
   ],
   "preserve_paths": [
-    "EarlGrey/CHANGELOG.md",
-    "EarlGrey/LICENSE",
-    "EarlGrey/README.md"
+    "ClunoEarlGrey/CHANGELOG.md",
+    "ClunoEarlGrey/LICENSE",
+    "ClunoEarlGrey/README.md"
   ],
   "ios": {
-    "vendored_frameworks": "EarlGrey/EarlGrey.framework"
+    "vendored_frameworks": "ClunoEarlGrey/EarlGrey.framework"
   },
   "pod_target_xcconfig": {
     "FRAMEWORK_SEARCH_PATHS": "$(inherited) $(PLATFORM_DIR)/Developer/Library/Frameworks",
