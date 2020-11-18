@@ -39,7 +39,7 @@ mkdir -p "${OUTPUT_PACKAGE_DIR}"
 (cd "${SOURCE_DIR}/.." && cp "${PACKAGE_FILES}" "${OUTPUT_PACKAGE_DIR}")
 
 # Symlink the framework so we don't need to copy.
-ln -s "${OUTPUT_DIR}/ClunoEarlGrey.framework" "${OUTPUT_PACKAGE_DIR}/ClunoEarlGrey.framework"
+ln -s "${OUTPUT_DIR}/EarlGrey.framework" "${OUTPUT_PACKAGE_DIR}/EarlGrey.framework"
 
 (cd "${OUTPUT_DIR}/.." \
   && zip -r -X "${CURRENT_DIR}/${PACKAGE_NAME}.zip" "${PACKAGE_NAME}")
