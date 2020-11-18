@@ -155,7 +155,10 @@ NSString *const kGREYXCTestCaseNotificationKey = @"GREYXCTestCaseNotificationKey
                          inFile:(NSString *)file
                     description:(NSString *)description {
   self.continueAfterFailure = NO;
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wdeprecated-declarations"
   [self recordFailureWithDescription:description inFile:file atLine:line expected:NO];
+  #pragma clang diagnostic pop
   // If the test fails outside of the main thread in a nested runloop it will not be interrupted
   // until it's back in the outer most runloop. Raise an exception to interrupt the test immediately
   [[GREYFrameworkException exceptionWithName:kInternalTestInterruptException
@@ -239,10 +242,13 @@ NSString *const kGREYXCTestCaseNotificationKey = @"GREYXCTestCaseNotificationKey
           break;
         case kGREYXCTestCaseStatusUnknown:
           self.continueAfterFailure = YES;
+          #pragma clang diagnostic push
+          #pragma clang diagnostic ignored "-Wdeprecated-declarations"
           [self recordFailureWithDescription:@"Test has finished with unknown status."
                                       inFile:@__FILE__
                                       atLine:__LINE__
                                     expected:NO];
+          #pragma clang diagnostic pop
           break;
       }
       object_setClass(self.invocation, originalInvocationClass);
