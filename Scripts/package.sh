@@ -24,7 +24,7 @@ CURRENT_DIR="${PWD}"
 : "${PROJECT_FILE_PATH:=${SOURCE_DIR}/../EarlGrey.xcodeproj}"
 : "${OUTPUT_DIR:=${SOURCE_DIR}/build}"
 
-readonly PACKAGE_NAME="ClunoEarlGrey"
+readonly PACKAGE_NAME="EarlGrey"
 readonly OUTPUT_TMP_DIR=$(mktemp -d)
 readonly OUTPUT_PACKAGE_DIR="${OUTPUT_TMP_DIR}/${PACKAGE_NAME}"
 readonly PACKAGE_FILES="README.md CHANGELOG.md LICENSE"
